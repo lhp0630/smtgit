@@ -2,7 +2,7 @@
 
 Guidance for AI coding agents working in **smtgit**.
 
-This file is the agent entry point. Detailed reusable rules live under [`Rules Specs/`](Rules%20Specs/README.md). Project-specific architecture and documentation format constraints extracted from the legacy agent guide live in [`Rules Specs/10-smtgit-project-conventions.md`](Rules%20Specs/10-smtgit-project-conventions.md).
+This file is the agent entry point. Detailed reusable rules live under [`.agents/rules/`](.agents/rules/README.md). Project-specific architecture and documentation format constraints extracted from the legacy agent guide live in [`.agents/rules/10-smtgit-project-conventions.md`](.agents/rules/10-smtgit-project-conventions.md). Cursor loads these via [`.cursor/rules/agents-rules.mdc`](.cursor/rules/agents-rules.mdc). Templates live under [`.agents/templates/`](.agents/templates/).
 
 Migration trace: [`docs/maintenance/agents-md-migration.md`](docs/maintenance/agents-md-migration.md).
 
@@ -28,11 +28,11 @@ Do not invent missing metadata or tooling.
 3. You MAY draft and revise RFCs and docs. You MUST NOT mark an RFC `Accepted` or claim Maintainer approval without explicit human authorization.
 4. You MUST NOT publish Issues, PRs, Discussions, or releases unless a human explicitly asks you to.
 
-See [`Rules Specs/00-maintainer-principles.md`](Rules%20Specs/00-maintainer-principles.md) and [`Rules Specs/09-community-governance.md`](Rules%20Specs/09-community-governance.md).
+See [`.agents/rules/00-maintainer-principles.md`](.agents/rules/00-maintainer-principles.md) and [`.agents/rules/09-community-governance.md`](.agents/rules/09-community-governance.md).
 
 ## Essential repository constraints (summary)
 
-Full normative detail: [`Rules Specs/10-smtgit-project-conventions.md`](Rules%20Specs/10-smtgit-project-conventions.md).
+Full normative detail: [`.agents/rules/10-smtgit-project-conventions.md`](.agents/rules/10-smtgit-project-conventions.md).
 
 - **Thin entry, thick shared:** reusable logic in `shared/`; `smtgit.sh` only orchestrates.
 - **Pure bash + system git;** currently only non-destructive `git pull`.
@@ -58,7 +58,7 @@ bash smtgit.sh help
 bash smtgit.sh help pull
 ```
 
-Rules: [`Rules Specs/01-repository-understanding.md`](Rules%20Specs/01-repository-understanding.md), [`Rules Specs/06-fact-checking.md`](Rules%20Specs/06-fact-checking.md).
+Rules: [`.agents/rules/01-repository-understanding.md`](.agents/rules/01-repository-understanding.md), [`.agents/rules/06-fact-checking.md`](.agents/rules/06-fact-checking.md).
 
 ## Documentation governance
 
@@ -67,13 +67,15 @@ Rules: [`Rules Specs/01-repository-understanding.md`](Rules%20Specs/01-repositor
 | Human overview | [`README.md`](README.md) |
 | Command reference / how-to | [`docs/`](docs/) |
 | RFC process | [`RFCs/README.md`](RFCs/README.md), [`RFCs/process.md`](RFCs/process.md) |
-| Detailed agent rules | [`Rules Specs/README.md`](Rules%20Specs/README.md) |
+| Detailed agent rules | [`.agents/rules/README.md`](.agents/rules/README.md) |
+| Doc templates | [`.agents/templates/`](.agents/templates/) |
+| Cursor Rules entry | [`.cursor/rules/agents-rules.mdc`](.cursor/rules/agents-rules.mdc) |
 
-Writing and structure rules: [`02-readme-writing.md`](Rules%20Specs/02-readme-writing.md), [`04-technical-writing.md`](Rules%20Specs/04-technical-writing.md), [`05-documentation-architecture.md`](Rules%20Specs/05-documentation-architecture.md).
+Writing and structure rules: [`02-readme-writing.md`](.agents/rules/02-readme-writing.md), [`04-technical-writing.md`](.agents/rules/04-technical-writing.md), [`05-documentation-architecture.md`](.agents/rules/05-documentation-architecture.md).
 
-Evidence and review: [`06-fact-checking.md`](Rules%20Specs/06-fact-checking.md), [`07-documentation-review.md`](Rules%20Specs/07-documentation-review.md), [`08-document-lifecycle.md`](Rules%20Specs/08-document-lifecycle.md).
+Evidence and review: [`06-fact-checking.md`](.agents/rules/06-fact-checking.md), [`07-documentation-review.md`](.agents/rules/07-documentation-review.md), [`08-document-lifecycle.md`](.agents/rules/08-document-lifecycle.md).
 
-RFC authoring: [`Rules Specs/03-rfc-writing.md`](Rules%20Specs/03-rfc-writing.md), template [`RFCs/TEMPLATE.md`](RFCs/TEMPLATE.md).
+RFC authoring: [`.agents/rules/03-rfc-writing.md`](.agents/rules/03-rfc-writing.md), template [`RFCs/TEMPLATE.md`](RFCs/TEMPLATE.md).
 
 ## Source-of-truth hierarchy
 
@@ -82,7 +84,7 @@ When instructions conflict, prefer in order:
 1. Explicit user / Maintainer direction for this task
 2. Accepted RFCs and Maintainer-approved policy
 3. This `AGENTS.md`
-4. [`Rules Specs/`](Rules%20Specs/) (project spec `10-…` wins over generic specs on smtgit-specific topics)
+4. [`.agents/rules/`](.agents/rules/) (project spec `10-…` wins over generic specs on smtgit-specific topics)
 5. Living docs that match current code (`docs/`, README)
 6. External references (advisory only)
 

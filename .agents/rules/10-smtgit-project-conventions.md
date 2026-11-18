@@ -35,7 +35,10 @@ smtgit/
 │   ├── <command>.md
 │   └── maintenance/          # Migration notes and retained implementation reports
 ├── RFCs/                     # Design / process proposals
-├── Rules Specs/              # Agent and documentation rules
+├── .agents/
+│   ├── rules/                # Agent and documentation rules
+│   └── templates/            # Doc / RFC / review templates
+├── .cursor/rules/            # Cursor Rules load entry → .agents/rules
 ├── .github/workflows/
 │   └── release.yml           # push v* tag → package + GitHub Release
 ├── README.md                 # Overview only
@@ -121,7 +124,7 @@ Additional rules:
 
 #### `docs/<command>.md` section order
 
-Align with [`../docs/pull.md`](../docs/pull.md):
+Align with [`docs/pull.md`](../../docs/pull.md):
 
 1. Title = command name; one-line description
 2. **命令** — usage block + options table
@@ -144,7 +147,7 @@ Style: use comparison tables for branches; keep example trees semantically accur
 When changing architecture or CLI semantics:
 
 1. Read this spec and matching `docs/`.
-2. Decide whether an RFC is required ([`../RFCs/README.md`](../RFCs/README.md)).
+2. Decide whether an RFC is required ([`RFCs/README.md`](../../RFCs/README.md)).
 3. Update code, `docs/<command>.md`, and README together when user-visible behavior changes.
 
 ## Verification criteria
@@ -155,9 +158,9 @@ When changing architecture or CLI semantics:
 
 ## Relationships
 
-- Summarized in [`../AGENTS.md`](../AGENTS.md)
+- Summarized in [`AGENTS.md`](../../AGENTS.md)
 - Complements [`05-documentation-architecture.md`](05-documentation-architecture.md) and [`02-readme-writing.md`](02-readme-writing.md)
-- Migration trace: [`../docs/maintenance/agents-md-migration.md`](../docs/maintenance/agents-md-migration.md)
+- Migration trace: [`docs/maintenance/agents-md-migration.md`](../../docs/maintenance/agents-md-migration.md)
 
 ## References
 

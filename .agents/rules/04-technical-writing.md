@@ -10,7 +10,7 @@ User-facing and contributor-facing Markdown in this repository.
 
 ## Applicable tasks
 
-- Writing or editing docs, README, RFCs, Rules Specs
+- Writing or editing docs, README, RFCs, `.agents/rules`
 - Terminology consistency passes
 
 ## Normative requirements

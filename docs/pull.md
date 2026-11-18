@@ -12,8 +12,13 @@ bash smtgit.sh pull -p <path> [--sdepth <0|1>]
 |------|------|--------|------|
 | `-p`, `--path` | 是 | — | 目标目录；支持绝对路径、相对路径或 `.` |
 | `--sdepth` | 否 | `1` | Git repo / 子模块的**嵌套扫描深度**（不是目录深度）。当前仅接受 `0` 或 `1` |
+| `-h`, `--help` | 否 | — | 打印本命令用法并退出 `0` |
 
-## sdepth 语义
+总览与最短示例见根目录 [README.md](../README.md)。
+
+## 关键语义
+
+### sdepth
 
 `sdepth` 表示 **Git 仓库嵌套层数**：
 
@@ -22,9 +27,9 @@ bash smtgit.sh pull -p <path> [--sdepth <0|1>]
 - `1`：只处理第一层嵌套仓库
 - `0`：不限制嵌套深度，递归全部
 
-实现上扫描函数按「最大嵌套层」编写，`0` 映射为无上限；日后可扩展任意正整数而无需改语义。
+实现上扫描函数按「最大嵌套层」编写，`0` 映射为无上限；日后可扩展任意正整数而无需改语义。当前 CLI 仍只接受 `0` 与 `1`。
 
-## 路径行为（方案 C）
+### 路径行为（方案 C）
 
 | `-p` 目标 | `sdepth=1`（默认） | `sdepth=0` |
 |-----------|-------------------|------------|
@@ -92,13 +97,14 @@ bash smtgit.sh pull -p . --sdepth 0
 ```bash
 bash smtgit.sh help
 bash smtgit.sh help pull
+bash smtgit.sh pull --help
 ```
 
 ## 退出码
 
 | 码 | 含义 |
 |----|------|
-| `0` | 全部 pull 成功（或未找到任何仓库，仅警告） |
+| `0` | 全部 pull 成功（或未找到任何仓库，仅警告）；或仅请求帮助（`-h` / `--help`） |
 | `1` | 参数错误、路径无效，或至少一个仓库 pull 失败 |
 
 ## 相关代码
@@ -109,4 +115,4 @@ bash smtgit.sh help pull
 | [`shared/scan.sh`](../shared/scan.sh) | 按 `sdepth` 发现仓库 |
 | [`shared/git.sh`](../shared/git.sh) | worktree 判定与 `git pull` |
 | [`shared/path.sh`](../shared/path.sh) | 路径规范化与目录校验 |
-| [`shared/log.sh`](../shared/log.sh) | 统一日志 |
+| [`shared/log.sh`](../shared/log.sh) | 统一日志（诊断输出到 stderr） |

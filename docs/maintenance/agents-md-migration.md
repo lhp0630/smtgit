@@ -5,10 +5,12 @@
 - **Bootstrap RFC:** [`RFCs/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md) (Status: Proposed)
 - **Migration date:** 2026-11-18
 - **New root entry:** [`AGENTS.md`](../../AGENTS.md)
-- **Primary extraction target:** [`Rules Specs/10-smtgit-project-conventions.md`](../../Rules%20Specs/10-smtgit-project-conventions.md)
+- **Primary extraction target:** [`.agents/rules/10-smtgit-project-conventions.md`](../../.agents/rules/10-smtgit-project-conventions.md) (relocated from `Rules Specs/` on 2026-11-18)
 - **Implementation report:** [`reports/2026-11-18-rfc-doc-001-documentation-governance-bootstrap.md`](reports/2026-11-18-rfc-doc-001-documentation-governance-bootstrap.md)
 
 This record exists so Maintainers can verify that meaningful legacy instructions were retained, extracted, consolidated, updated, deprecated, or flagged — not silently discarded.
+
+**Audience:** Maintainers and agents verifying the governance bootstrap. This is a historical migration trace, not end-user product documentation. Product command semantics live in [`docs/pull.md`](../pull.md); release packaging in [`docs/release.md`](../release.md).
 
 ## 1. Inventory by category
 
@@ -72,7 +74,7 @@ No legacy instruction was found to be false against current code. Layout omissio
 |-------|--------|---------|----------------|
 | RFC-DOC-001 remains **Proposed** while deliverables exist | Governance may be “implemented but not adopted” | Accept RFC; request revisions; reject | Review deliverables, then set status explicitly |
 | Documentation language policy (Chinese product docs vs English governance) | Contributors may be unsure which language to use where | Keep bilingual split; move all to English; move all to Chinese | Keep current split until policy is written |
-| Whether release archives should include `RFCs/` and `Rules Specs/` | `release.yml` currently packages `smtgit.sh`, `shared/`, `docs/`, `README.md`, `AGENTS.md` only | Extend package list; keep runtime-only archives; document exclusion | Keep runtime-focused archives unless agents need rules offline; if Specs should ship, update workflow + `docs/release.md` |
+| Whether release archives should include `RFCs/` and `.agents/rules/` (formerly `Rules Specs/`) | `release.yml` currently packages `smtgit.sh`, `shared/`, `docs/`, `README.md`, `AGENTS.md` only | Extend package list; keep runtime-only archives; document exclusion | Keep runtime-focused archives unless agents need rules offline; if Specs should ship, update workflow + `docs/release.md` |
 | Missing `LICENSE` / community files | README cannot state license or contribution rules authoritatively | Add LICENSE + CONTRIBUTING; leave absent; draft as Proposed RFCs | Add LICENSE when ready; avoid inventing terms in docs |
 | Whether Spec `10` English text should also keep a Chinese normative twin | Translation drift risk | English-only Spec `10`; bilingual Spec `10`; Chinese Spec + English AGENTS summary | Start English-only Spec `10`; fix wording if Maintainers find drift |
 
@@ -88,3 +90,10 @@ No legacy instruction was found to be false against current code. Layout omissio
 - Compared Spec `10` domain rules against `smtgit.sh`, `shared/git.sh`, `shared/scan.sh`, and `docs/pull.md`: aligned.
 - Confirmed no nested `AGENTS.md`.
 - Confirmed legacy file had no RFC/test/license instructions to migrate.
+
+## 8. Addendum — 2026-11-18 path relocation
+
+- `Rules Specs/` renamed to `.agents/rules/`.
+- `Rules Specs/templates/` moved to `.agents/templates/` (sibling of `rules/`).
+- Cursor Rules load entry added at `.cursor/rules/agents-rules.mdc` (`alwaysApply: true`) pointing agents at `AGENTS.md` and `.agents/rules/`.
+- Living docs (`AGENTS.md`, README, RFC process links, Spec `10` layout) updated to the new paths. Historical RFC-DOC-001 narrative that named the original `Rules Specs/` deliverable is left intact as proposal history.

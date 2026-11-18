@@ -15,11 +15,11 @@ All documents under `RFCs/` and RFC-related templates.
 
 ## Normative requirements
 
-1. RFCs MUST use [`../RFCs/TEMPLATE.md`](../RFCs/TEMPLATE.md) for new proposals unless Maintainers approve a variant.
+1. RFCs MUST use [`RFCs/TEMPLATE.md`](../../RFCs/TEMPLATE.md) for new proposals unless Maintainers approve a variant.
 2. RFCs MUST include Summary, Problem, Motivation, Goals, Non-goals, Design, Alternatives, and Open questions (adapt only with justification).
 3. RFCs MUST analyze at least one meaningful alternative when a design choice exists.
 4. RFCs MUST separate **acceptance** from **implementation completion**.
-5. Status transitions to Accepted / Rejected / Deferred / Implemented / Superseded MUST be performed only with Maintainer authority ([`../RFCs/process.md`](../RFCs/process.md)).
+5. Status transitions to Accepted / Rejected / Deferred / Implemented / Superseded MUST be performed only with Maintainer authority ([`RFCs/process.md`](../../RFCs/process.md)).
 6. Agents MAY draft and revise RFCs; agents MUST NOT claim an RFC is approved.
 7. Historical RFCs MUST remain readable as historical records; substantial redesigns SHOULD supersede rather than silently rewrite.
 
@@ -31,7 +31,7 @@ All documents under `RFCs/` and RFC-related templates.
 
 ## Required workflow
 
-1. Confirm an RFC is warranted ([`../RFCs/README.md`](../RFCs/README.md)).
+1. Confirm an RFC is warranted ([`RFCs/README.md`](../../RFCs/README.md)).
 2. Gather repository evidence.
 3. Draft from the template.
 4. List open Maintainer questions explicitly.

@@ -49,4 +49,4 @@ Governance actions, public statements, and contribution-facing policy documents.
 
 - [GitHub Open Source Guides](https://opensource.guide/)
 - [Apache OpenDAL AI-assisted contribution boundaries](https://github.com/apache/opendal/blob/main/AGENTS.md)
-- [`../RFCs/process.md`](../RFCs/process.md)
+- [`RFCs/process.md`](../../RFCs/process.md)

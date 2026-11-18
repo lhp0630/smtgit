@@ -97,6 +97,6 @@ Historical RFCs MUST NOT be silently rewritten to match newer templates. Amend v
 
 ## Related rules
 
-- [`../Rules Specs/03-rfc-writing.md`](../Rules%20Specs/03-rfc-writing.md)
-- [`../Rules Specs/09-community-governance.md`](../Rules%20Specs/09-community-governance.md)
+- [`../.agents/rules/03-rfc-writing.md`](../.agents/rules/03-rfc-writing.md)
+- [`../.agents/rules/09-community-governance.md`](../.agents/rules/09-community-governance.md)
 - [`../AGENTS.md`](../AGENTS.md)

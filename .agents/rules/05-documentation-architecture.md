@@ -6,7 +6,7 @@ Organize smtgit documentation by reader need while respecting the repository’s
 
 ## Scope
 
-Information architecture for `README.md`, `docs/`, `RFCs/`, `Rules Specs/`, and `AGENTS.md`.
+Information architecture for `README.md`, `docs/`, `RFCs/`, `.agents/rules/`, and `AGENTS.md`.
 
 ## Applicable tasks
 
@@ -24,7 +24,7 @@ Information architecture for `README.md`, `docs/`, `RFCs/`, `Rules Specs/`, and 
 | Task-oriented procedure | How-to | `docs/release.md`, workflow sections in `docs/<command>.md` |
 | Exact semantics / options | Reference | `docs/<command>.md` command tables, exit codes |
 | Concepts / rationale | Explanation | `docs/<command>.md` key semantics; RFCs for decisions |
-| Agent operating rules | Agent guide | `AGENTS.md` + `Rules Specs/` |
+| Agent operating rules | Agent guide | `AGENTS.md` + `.agents/rules/` |
 
 Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees unless Maintainers request them.
 
@@ -64,4 +64,4 @@ Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees un
 
 - [Diátaxis](https://diataxis.fr/)
 - [`10-smtgit-project-conventions.md`](10-smtgit-project-conventions.md)
-- [`../docs/pull.md`](../docs/pull.md) (canonical command-doc example)
+- [`docs/pull.md`](../../docs/pull.md) (canonical command-doc example)

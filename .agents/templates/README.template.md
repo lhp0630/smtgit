@@ -13,7 +13,7 @@ Use this when creating or substantially revising `README.md`.
 ## Optional sections (after the required ones)
 
 - Release / tag notes (only if matching `docs/release.md` + workflow)
-- Link to `AGENTS.md` / `RFCs/` / `Rules Specs/` for contributors and agents
+- Link to `AGENTS.md` / `RFCs/` / `.agents/rules/` for contributors and agents
 - Contribution pointer (only if `CONTRIBUTING.md` exists or draft status is explicit)
 - License (only if a LICENSE file exists)
 

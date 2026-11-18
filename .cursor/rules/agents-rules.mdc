@@ -1,0 +1,33 @@
+---
+description: Load smtgit agent rules from .agents/rules (Cursor Rules entry)
+alwaysApply: true
+---
+
+# Agent rules load entry
+
+Cursor project rules do not auto-load `.agents/rules/` as `.mdc` files. This file is the load entry: always apply root agent guidance and require reading the numbered specs under `.agents/rules/` for the task at hand.
+
+## Canonical locations
+
+- `@AGENTS.md` — agent entry point and constraint summary (always follow)
+- `@.agents/rules/` — detailed reusable rules (`00`–`10`; start from `@.agents/rules/README.md`)
+- `@.agents/templates/` — documentation / RFC / review templates
+- Project-specific architecture: `@.agents/rules/10-smtgit-project-conventions.md`
+
+## When to read which rules
+
+| Task | Read |
+|------|------|
+| Any change | `AGENTS.md`; apply source-of-truth hierarchy there |
+| Code / CLI / layout | `10-smtgit-project-conventions.md` |
+| Docs / README | `02`, `04`, `05` |
+| RFCs | `03`, `09`; use `RFCs/TEMPLATE.md` |
+| Evidence / review / lifecycle | `01`, `06`, `07`, `08` |
+| Authority / governance | `00`, `09` |
+
+## Hard constraints (do not weaken)
+
+- Human Maintainers own RFC acceptance, security/governance policy, releases, and irreversible changes.
+- Pure bash + system `git`; no destructive git operations without Maintainer-approved RFC.
+- Do not invent licenses, tests, security guarantees, or missing tooling.
+- Prefer linking to `.agents/rules/` over copying full procedures into this rule or into `AGENTS.md`.

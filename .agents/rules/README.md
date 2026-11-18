@@ -1,8 +1,8 @@
-# Rules Specs
+# Agent Rules
 
 Modular rules for AI coding agents and human contributors acting as documentation maintainers for smtgit.
 
-These specifications expand [`../AGENTS.md`](../AGENTS.md). Prefer linking from `AGENTS.md` over duplicating full procedures there.
+These specifications expand [`AGENTS.md`](../../AGENTS.md). Prefer linking from `AGENTS.md` over duplicating full procedures there.
 
 ## Normative language
 
@@ -34,10 +34,10 @@ These specifications expand [`../AGENTS.md`](../AGENTS.md). Prefer linking from 
 
 | Template | Use |
 |----------|-----|
-| [templates/README.template.md](templates/README.template.md) | New or major README rewrite checklist |
-| [templates/RFC.template.md](templates/RFC.template.md) | Pointer to canonical RFC template |
-| [templates/ADR.template.md](templates/ADR.template.md) | Lightweight architecture decision records |
-| [templates/DOCUMENTATION-REVIEW.template.md](templates/DOCUMENTATION-REVIEW.template.md) | Documentation review report |
+| [../templates/README.template.md](../templates/README.template.md) | New or major README rewrite checklist |
+| [../templates/RFC.template.md](../templates/RFC.template.md) | Pointer to canonical RFC template |
+| [../templates/ADR.template.md](../templates/ADR.template.md) | Lightweight architecture decision records |
+| [../templates/DOCUMENTATION-REVIEW.template.md](../templates/DOCUMENTATION-REVIEW.template.md) | Documentation review report |
 
 ## Precedence
 
@@ -45,8 +45,8 @@ When instructions conflict:
 
 1. Explicit user / Maintainer instructions for the current task
 2. Accepted RFCs and Maintainer-approved policy
-3. Root [`AGENTS.md`](../AGENTS.md)
-4. Relevant Rules Specs (project-specific `10-…` over generic specs when both apply)
+3. Root [`AGENTS.md`](../../AGENTS.md)
+4. Relevant `.agents/rules` (project-specific `10-…` over generic specs when both apply)
 5. Existing maintained docs that match current code
 6. External style references (advisory)
 

@@ -150,5 +150,5 @@ RFC-<AREA>-<NNN>-kebab-title.md
 
 - [`README.md`](README.md)
 - [`TEMPLATE.md`](TEMPLATE.md)
-- [`../Rules Specs/03-rfc-writing.md`](../Rules%20Specs/03-rfc-writing.md)
-- [`../Rules Specs/09-community-governance.md`](../Rules%20Specs/09-community-governance.md)
+- [`../.agents/rules/03-rfc-writing.md`](../.agents/rules/03-rfc-writing.md)
+- [`../.agents/rules/09-community-governance.md`](../.agents/rules/09-community-governance.md)

@@ -6,7 +6,7 @@ Define the Documentation Maintainer role for agents and contributors working on 
 
 ## Scope
 
-Applies to work on `README.md`, `AGENTS.md`, `docs/`, `RFCs/`, `Rules Specs/`, and related maintenance docs.
+Applies to work on `README.md`, `AGENTS.md`, `docs/`, `RFCs/`, `.agents/rules/`, and related maintenance docs.
 
 Does **not** authorize silent changes to application behavior, public CLI contracts, or release automation.
 
@@ -21,7 +21,7 @@ Does **not** authorize silent changes to application behavior, public CLI contra
 
 1. Agents MUST treat the human Maintainer as final authority for RFC acceptance, security policy, release decisions, and irreversible repository changes.
 2. Agents MUST prefer evidence from this repository over analogies from other projects.
-3. Agents MUST keep root `AGENTS.md` concise and push detailed procedures into Rules Specs or `docs/`.
+3. Agents MUST keep root `AGENTS.md` concise and push detailed procedures into `.agents/rules` or `docs/`.
 4. Agents MUST preserve project-specific constraints in [`10-smtgit-project-conventions.md`](10-smtgit-project-conventions.md) unless a Maintainer-approved RFC changes them.
 5. Agents SHOULD minimize process weight: add rules only when they prevent a real class of errors.
 
@@ -49,6 +49,6 @@ Does **not** authorize silent changes to application behavior, public CLI contra
 
 ## References
 
-- [`../AGENTS.md`](../AGENTS.md)
+- [`AGENTS.md`](../../AGENTS.md)
 - [Apache OpenDAL AGENTS.md — AI-Assisted Contributions](https://github.com/apache/opendal/blob/main/AGENTS.md)
-- [`../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md`](../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md)
+- [`RFCs/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md)

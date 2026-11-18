@@ -6,7 +6,7 @@ Provide a repeatable review method and severity model for documentation changes.
 
 ## Scope
 
-Reviews of README, `docs/`, RFCs, Rules Specs, and `AGENTS.md`.
+Reviews of README, `docs/`, RFCs, `.agents/rules`, and `AGENTS.md`.
 
 ## Applicable tasks
 
@@ -28,7 +28,7 @@ Reviews of README, `docs/`, RFCs, Rules Specs, and `AGENTS.md`.
 ### Review checklist
 
 1. Evidence: Are claims backed ([06-fact-checking.md](06-fact-checking.md))?
-2. Consistency: Do AGENTS.md, Rules Specs, RFCs, and README agree?
+2. Consistency: Do AGENTS.md, `.agents/rules`, RFCs, and README agree?
 3. Links: Do internal paths resolve?
 4. Authority: Does the text preserve Maintainer control of acceptance / release / security?
 5. Preservation: Were legacy `AGENTS.md` constraints retained, migrated, or explicitly deprecated?
@@ -44,7 +44,7 @@ Reviews of README, `docs/`, RFCs, Rules Specs, and `AGENTS.md`.
 
 1. Read the change diff and related authoritative docs.
 2. Apply the checklist.
-3. File findings by severity using [`templates/DOCUMENTATION-REVIEW.template.md`](templates/DOCUMENTATION-REVIEW.template.md) when a formal review is requested.
+3. File findings by severity using [`../templates/DOCUMENTATION-REVIEW.template.md`](../templates/DOCUMENTATION-REVIEW.template.md) when a formal review is requested.
 4. Fix Blocker/Major issues in-scope before declaring done.
 
 ## Verification criteria

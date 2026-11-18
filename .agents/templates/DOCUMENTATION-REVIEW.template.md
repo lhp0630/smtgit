@@ -3,7 +3,7 @@
 - **Subject:** <paths or PR>
 - **Reviewer:** <name or agent + human supervisor>
 - **Date:** YYYY-MM-DD
-- **Scope:** <README | docs | RFCs | Rules Specs | AGENTS.md | mixed>
+- **Scope:** <README | docs | RFCs | `.agents/rules` | AGENTS.md | mixed>
 
 ## Summary
 
@@ -23,7 +23,7 @@ One short paragraph verdict.
 
 ## Cross-document consistency
 
-- [ ] AGENTS.md ↔ Rules Specs
+- [ ] AGENTS.md ↔ `.agents/rules`
 - [ ] README ↔ implementation / help
 - [ ] RFCs process ↔ template ↔ RFC writing rules
 - [ ] No proposed capability described as shipped

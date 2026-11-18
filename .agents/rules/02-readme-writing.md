@@ -31,13 +31,13 @@ Additional sections (release notes pointer, governance links, contribution, lice
 
 1. README MUST explain what smtgit does before deep implementation detail.
 2. Quick Start commands MUST be verified against the CLI.
-3. README MUST NOT absorb full `sdepth` / scan workflows — link to [`../docs/pull.md`](../docs/pull.md).
+3. README MUST NOT absorb full `sdepth` / scan workflows — link to [`docs/pull.md`](../../docs/pull.md).
 4. README MUST NOT invent badges, stars, benchmarks, license text, or maturity labels without evidence.
 5. README SHOULD remain primarily aligned with the repository’s established reader language for product docs (currently Chinese for overview sections; CLI snippets may be English as in the script). Language policy conflicts MUST be escalated to Maintainers rather than silently rewritten.
 
 ## Prohibited behavior
 
-1. MUST NOT duplicate the entire Rules Specs / RFC system in the README.
+1. MUST NOT duplicate the entire `.agents/rules` / RFC system in the README.
 2. MUST NOT claim destructive git operations beyond what the code performs (currently `git pull` only).
 3. MUST NOT list dependencies other than bash + system `git` unless the repo gains them.
 
@@ -46,7 +46,7 @@ Additional sections (release notes pointer, governance links, contribution, lice
 1. Confirm current subcommands from `smtgit.sh`.
 2. Confirm layout from the repository tree.
 3. Verify Quick Start commands.
-4. Link detailed docs and, if useful, governance entry points (`AGENTS.md`, `RFCs/`, `Rules Specs/`).
+4. Link detailed docs and, if useful, governance entry points (`AGENTS.md`, `RFCs/`, `.agents/rules/`).
 
 ## Verification criteria
 
@@ -58,4 +58,4 @@ Additional sections (release notes pointer, governance links, contribution, lice
 
 - [GitHub Open Source Guides](https://opensource.guide/)
 - [Diátaxis](https://diataxis.fr/) (README ≈ orientation + quick how-to, not full reference)
-- [`templates/README.template.md`](templates/README.template.md)
+- [`../templates/README.template.md`](../templates/README.template.md)
