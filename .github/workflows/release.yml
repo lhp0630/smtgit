@@ -1,0 +1,54 @@
+# Trigger: push a version tag (e.g. v1.0.0). Creating a tag alone does NOT
+# create a GitHub Release — this workflow creates the Release and attaches
+# packaged archive assets.
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: meta
+        run: |
+          tag="${GITHUB_REF_NAME}"
+          version="${tag#v}"
+          echo "tag=${tag}" >> "$GITHUB_OUTPUT"
+          echo "version=${version}" >> "$GITHUB_OUTPUT"
+          echo "Staging release for ${tag} (version ${version})"
+
+      - name: Package repository
+        run: |
+          set -euo pipefail
+          tag="${{ steps.meta.outputs.tag }}"
+          version="${{ steps.meta.outputs.version }}"
+          staging="smtgit-${version}"
+          mkdir -p dist "${staging}"
+
+          # Ship the runnable project tree (not .git / CI / local junk).
+          cp -a smtgit.sh shared docs README.md AGENTS.md "${staging}/"
+          tar -czf "dist/${staging}.tar.gz" "${staging}"
+          zip -qr "dist/${staging}.zip" "${staging}"
+
+          echo "Artifacts:"
+          ls -la dist/
+
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.meta.outputs.tag }}
+          name: smtgit ${{ steps.meta.outputs.version }}
+          generate_release_notes: true
+          files: |
+            dist/smtgit-${{ steps.meta.outputs.version }}.tar.gz
+            dist/smtgit-${{ steps.meta.outputs.version }}.zip
