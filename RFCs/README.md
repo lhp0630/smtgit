@@ -6,6 +6,8 @@ This system is adapted from practices in [Kubernetes Enhancement Proposals](http
 
 ## What an RFC is
 
+An RFC answers: **What should we do and why?**
+
 An RFC is a Markdown proposal that:
 
 - States a problem and motivation.
@@ -13,6 +15,16 @@ An RFC is a Markdown proposal that:
 - Describes a design and alternatives.
 - Records trade-offs, risks, and open questions.
 - Has an explicit status controlled by human Maintainers.
+
+Related document types (do not substitute for each other):
+
+| Location | Question |
+|----------|----------|
+| **`RFCs/`** (this tree) | What should we do and why? |
+| [`docs/research/`](../docs/research/README.md) | What have we learned and what should we consider? |
+| [`docs/maintenance/reports/`](../docs/maintenance/reports/) | What did we actually do and what happened? |
+
+Prefer a research report under `docs/research/` when evidence and options are still open; promote a design choice into an RFC when Maintainers need a decision record. After implementation of significant accepted work, retain an execution report under `docs/maintenance/reports/`.
 
 Routine bug fixes, small refactors, and documentation clarifications that do not change project meaning normally do **not** need an RFC.
 

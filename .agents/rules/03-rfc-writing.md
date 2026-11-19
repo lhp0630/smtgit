@@ -32,7 +32,7 @@ All documents under `RFCs/` and RFC-related templates.
 ## Required workflow
 
 1. Confirm an RFC is warranted ([`RFCs/README.md`](../../RFCs/README.md)).
-2. Gather repository evidence.
+2. Gather repository evidence; if substantial pre-decision investigation was done, cite or place it under [`docs/research/`](../../docs/research/README.md) (research ≠ RFC acceptance).
 3. Draft from the template.
 4. List open Maintainer questions explicitly.
 5. Submit for human review.

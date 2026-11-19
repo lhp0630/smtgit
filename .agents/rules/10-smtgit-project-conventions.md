@@ -33,8 +33,9 @@ smtgit/
 │   └── scan.sh               # Discover Git repos by sdepth
 ├── docs/                     # Per-command / topic docs
 │   ├── <command>.md
+│   ├── research/             # Research reports (what we learned / should consider)
 │   └── maintenance/          # Migration notes and retained implementation reports
-├── RFCs/                     # Design / process proposals
+├── RFCs/                     # Design / process proposals (what we should do and why)
 ├── .agents/
 │   ├── rules/                # Agent and documentation rules
 │   └── templates/            # Doc / RFC / review templates

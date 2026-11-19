@@ -23,10 +23,10 @@ These specifications expand [`AGENTS.md`](../../AGENTS.md). Prefer linking from 
 | [02-readme-writing.md](02-readme-writing.md) | README structure and validation |
 | [03-rfc-writing.md](03-rfc-writing.md) | Proposal quality and lifecycle |
 | [04-technical-writing.md](04-technical-writing.md) | Writing style and terminology |
-| [05-documentation-architecture.md](05-documentation-architecture.md) | Doc types and navigation |
+| [05-documentation-architecture.md](05-documentation-architecture.md) | Doc types, navigation, RFC/research/report triad |
 | [06-fact-checking.md](06-fact-checking.md) | Evidence and accuracy |
 | [07-documentation-review.md](07-documentation-review.md) | Review severity and QA |
-| [08-document-lifecycle.md](08-document-lifecycle.md) | Versioning, historical integrity, implementation report retention |
+| [08-document-lifecycle.md](08-document-lifecycle.md) | Versioning, research vs implementation reports, historical integrity |
 | [09-community-governance.md](09-community-governance.md) | Human authority and public communication |
 | [10-smtgit-project-conventions.md](10-smtgit-project-conventions.md) | smtgit-specific architecture and docs rules (extracted from legacy `AGENTS.md`) |
 

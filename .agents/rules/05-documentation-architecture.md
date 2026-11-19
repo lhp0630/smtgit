@@ -16,6 +16,18 @@ Information architecture for `README.md`, `docs/`, `RFCs/`, `.agents/rules/`, an
 
 ## Normative requirements
 
+### Decision-document triad (normative)
+
+Use these locations for substantial design and governance work. Do **not** collapse their roles.
+
+| Location | Question it answers | Notes |
+|----------|---------------------|-------|
+| [`RFCs/`](../../RFCs/README.md) | What should we do and why? | Maintainer-controlled proposals and decision records |
+| [`docs/research/`](../../docs/research/README.md) | What have we learned and what should we consider? | Research reports; evidence and options; **not** acceptance |
+| [`docs/maintenance/reports/`](../../docs/maintenance/reports/) | What did we actually do and what happened? | Implementation / migration execution records ([`08-document-lifecycle.md`](08-document-lifecycle.md)) |
+
+New Research Reports MUST be delivered under `docs/research/` (see that directory’s README). Maintainer-approved product staging trees MAY mirror the same role until extracted.
+
 ### Diátaxis mapping (adapted, not forced into new top-level dirs)
 
 | Need | Form | smtgit location |
@@ -23,7 +35,7 @@ Information architecture for `README.md`, `docs/`, `RFCs/`, `.agents/rules/`, an
 | Orientation / quick start | Tutorial-lite / how-to | `README.md` Quick Start |
 | Task-oriented procedure | How-to | `docs/release.md`, workflow sections in `docs/<command>.md` |
 | Exact semantics / options | Reference | `docs/<command>.md` command tables, exit codes |
-| Concepts / rationale | Explanation | `docs/<command>.md` key semantics; RFCs for decisions |
+| Concepts / rationale | Explanation | `docs/<command>.md` key semantics; RFCs for decisions; research under `docs/research/` when pre-decision |
 | Agent operating rules | Agent guide | `AGENTS.md` + `.agents/rules/` |
 
 Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees unless Maintainers request them.

@@ -20,8 +20,9 @@ smtgit/
 ├── docs/
 │   ├── pull.md               # pull 详细语义与工作流程
 │   ├── release.md            # Tag / Release 发布流程
+│   ├── research/             # 调研报告（学到了什么 / 应考虑什么）
 │   └── maintenance/          # 迁移记录与实施报告
-├── RFCs/                     # 设计与流程提案
+├── RFCs/                     # 设计与流程提案（应做什么 / 为什么）
 ├── .agents/
 │   ├── rules/                # 文档与 Agent 规则规格
 │   └── templates/            # 文档 / RFC / 评审模板
@@ -66,8 +67,10 @@ git push origin v1.0.0
 |------|------|
 | [docs/pull.md](docs/pull.md) | `pull` 命令参考 |
 | [docs/release.md](docs/release.md) | Tag / GitHub Release 流程 |
+| [docs/research/](docs/research/README.md) | 调研报告（学到了什么 / 应考虑什么） |
+| [docs/maintenance/reports/](docs/maintenance/reports/) | 实施 / 迁移执行报告（实际做了什么） |
 | [AGENTS.md](AGENTS.md) | AI Coding Agent 入口与约束摘要 |
-| [RFCs/](RFCs/README.md) | RFC 流程与提案 |
+| [RFCs/](RFCs/README.md) | RFC 流程与提案（应做什么 / 为什么） |
 | [.agents/rules/](.agents/rules/README.md) | 文档维护与写作规则 |
 | [.cursor/rules/agents-rules.mdc](.cursor/rules/agents-rules.mdc) | Cursor Rules 加载入口 |
 | [docs/maintenance/agents-md-migration.md](docs/maintenance/agents-md-migration.md) | 既有 `AGENTS.md` 迁移记录 |

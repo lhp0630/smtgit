@@ -51,7 +51,8 @@ Before changing behavior or docs:
 1. Read relevant source under `smtgit.sh` / `shared/`.
 2. Read matching docs under `docs/`.
 3. Check RFCs for proposed vs accepted decisions (`RFCs/`).
-4. Verify CLI text with:
+4. Check research reports under `docs/research/`.
+5. Verify CLI text with:
 
 ```bash
 bash smtgit.sh help
@@ -66,7 +67,9 @@ Rules: [`.agents/rules/01-repository-understanding.md`](.agents/rules/01-reposit
 |-------------|----------|
 | Human overview | [`README.md`](README.md) |
 | Command reference / how-to | [`docs/`](docs/) |
-| RFC process | [`RFCs/README.md`](RFCs/README.md), [`RFCs/process.md`](RFCs/process.md) |
+| Research reports | [`docs/research/`](docs/research/README.md) — *what have we learned / should we consider?* |
+| RFC process | [`RFCs/README.md`](RFCs/README.md), [`RFCs/process.md`](RFCs/process.md) — *what should we do and why?* |
+| Implementation / migration reports | [`docs/maintenance/reports/`](docs/maintenance/reports/) — *what did we actually do?* |
 | Detailed agent rules | [`.agents/rules/README.md`](.agents/rules/README.md) |
 | Doc templates | [`.agents/templates/`](.agents/templates/) |
 | Cursor Rules entry | [`.cursor/rules/agents-rules.mdc`](.cursor/rules/agents-rules.mdc) |
