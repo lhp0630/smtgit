@@ -26,7 +26,7 @@ Use these locations for substantial design and governance work. Do **not** colla
 | [`docs/research/`](../../docs/research/README.md) | What have we learned and what should we consider? | Research reports; evidence and options; **not** acceptance |
 | [`docs/maintenance/reports/`](../../docs/maintenance/reports/) | What did we actually do and what happened? | Implementation / migration execution records ([`08-document-lifecycle.md`](08-document-lifecycle.md)) |
 
-New Research Reports MUST be delivered under `docs/research/` (see that directory’s README). Maintainer-approved product staging trees MAY mirror the same role until extracted.
+New Research Reports MUST be delivered under `docs/research/` (see that directory’s README).
 
 ### Diátaxis mapping (adapted, not forced into new top-level dirs)
 
