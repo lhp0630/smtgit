@@ -32,7 +32,7 @@ Any technical statement about smtgit behavior, requirements, release process, or
 
 1. MUST NOT invent LICENSE, SECURITY, test suites, package managers, or supported OS matrices.
 2. MUST NOT claim the tool performs git operations beyond what `shared/git.sh` implements.
-3. MUST NOT claim RFC-DOC-001 is accepted unless Maintainers change its status.
+3. MUST NOT claim an RFC is Accepted unless its Status field (and filing) show Maintainer acceptance (RFC-DOC-001 is Accepted as of 2026-11-19).
 
 ## Required workflow
 

@@ -74,4 +74,4 @@ git push origin v1.0.0
 
 当前仓库**没有** `LICENSE`、`CONTRIBUTING.md`、`SECURITY.md` 或 `CHANGELOG.md`；贡献与许可政策以维护者后续说明为准。
 
-RFC-DOC-001（文档治理体系）目前状态为 **Proposed**，在维护者正式接受前不应视为已批准政策；相关文件是按该 RFC 的实施请求落地的可评审草案。
+RFC-DOC-001（文档治理体系）状态为 **Accepted**（2026-11-19）；正文见 [`RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md)。

@@ -51,4 +51,4 @@ Does **not** authorize silent changes to application behavior, public CLI contra
 
 - [`AGENTS.md`](../../AGENTS.md)
 - [Apache OpenDAL AGENTS.md — AI-Assisted Contributions](https://github.com/apache/opendal/blob/main/AGENTS.md)
-- [`RFCs/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md)
+- [`RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md)

@@ -2,7 +2,7 @@
 
 - **Original location:** `/AGENTS.md` (repository root)
 - **Nested AGENTS.md files:** none found
-- **Bootstrap RFC:** [`RFCs/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/RFC-DOC-001-documentation-governance-bootstrap.md) (Status: Proposed)
+- **Bootstrap RFC:** [`RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md) (Status: **Accepted**, 2026-11-19; was Proposed at migration time)
 - **Migration date:** 2026-11-18
 - **New root entry:** [`AGENTS.md`](../../AGENTS.md)
 - **Primary extraction target:** [`.agents/rules/10-smtgit-project-conventions.md`](../../.agents/rules/10-smtgit-project-conventions.md) (relocated from `Rules Specs/` on 2026-11-18)
@@ -72,7 +72,7 @@ No legacy instruction was found to be false against current code. Layout omissio
 
 | Issue | Impact | Options | Recommendation |
 |-------|--------|---------|----------------|
-| RFC-DOC-001 remains **Proposed** while deliverables exist | Governance may be “implemented but not adopted” | Accept RFC; request revisions; reject | Review deliverables, then set status explicitly |
+| ~~RFC-DOC-001 remains **Proposed** while deliverables exist~~ | ~~Governance may be “implemented but not adopted”~~ | ~~Accept RFC; request revisions; reject~~ | **Resolved 2026-11-19:** Status set to **Accepted**; filed under `RFCs/accepted/` |
 | Documentation language policy (Chinese product docs vs English governance) | Contributors may be unsure which language to use where | Keep bilingual split; move all to English; move all to Chinese | Keep current split until policy is written |
 | Whether release archives should include `RFCs/` and `.agents/rules/` (formerly `Rules Specs/`) | `release.yml` currently packages `smtgit.sh`, `shared/`, `docs/`, `README.md`, `AGENTS.md` only | Extend package list; keep runtime-only archives; document exclusion | Keep runtime-focused archives unless agents need rules offline; if Specs should ship, update workflow + `docs/release.md` |
 | Missing `LICENSE` / community files | README cannot state license or contribution rules authoritatively | Add LICENSE + CONTRIBUTING; leave absent; draft as Proposed RFCs | Add LICENSE when ready; avoid inventing terms in docs |
@@ -97,3 +97,10 @@ No legacy instruction was found to be false against current code. Layout omissio
 - `Rules Specs/templates/` moved to `.agents/templates/` (sibling of `rules/`).
 - Cursor Rules load entry added at `.cursor/rules/agents-rules.mdc` (`alwaysApply: true`) pointing agents at `AGENTS.md` and `.agents/rules/`.
 - Living docs (`AGENTS.md`, README, RFC process links, Spec `10` layout) updated to the new paths. Historical RFC-DOC-001 narrative that named the original `Rules Specs/` deliverable is left intact as proposal history.
+
+## 9. Addendum — 2026-11-19 RFC-DOC-001 Accepted
+
+- Human Maintainers set RFC-DOC-001 Status to **Accepted** (Accepted: 2026-11-19).
+- Canonical file relocated to [`RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md).
+- A stub remains at `RFCs/RFC-DOC-001-documentation-governance-bootstrap.md` pointing to the canonical path.
+- Historical implementation reports that record Status **Proposed** *at time of work* are left unchanged per Spec `08`.
