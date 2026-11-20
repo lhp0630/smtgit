@@ -104,6 +104,7 @@ Status directories may hold stubs or relocated copies once Maintainers adopt a f
 | RFC | Title | Status |
 |-----|-------|--------|
 | [RFC-DOC-001](accepted/RFC-DOC-001-documentation-governance-bootstrap.md) | Documentation Governance Bootstrap | Accepted |
+| [RFC-DOC-002](RFC-DOC-002-agent-governance-bootstrap.md) | Agent Governance Bootstrap Tool (agb) | Draft |
 
 Historical RFCs MUST NOT be silently rewritten to match newer templates. Amend via a new RFC or an explicit Maintainer-approved amendment note.
 
