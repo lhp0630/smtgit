@@ -9,7 +9,7 @@
 - **Updated:** 2026-11-19
 - **Supersedes:** N/A
 - **Superseded by:** N/A
-- **Related research:** [`../agb/docs/research/repository-governance-bootstrap-tool-research.md`](../agb/docs/research/repository-governance-bootstrap-tool-research.md)
+- **Related research:** [`../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`](../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md)
 - **Related RFC:** [`accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](accepted/RFC-DOC-001-documentation-governance-bootstrap.md) (Status: **Accepted** in smtgit — governance policy baseline for portable Core; target Examples remain non-sequence copies)
 
 ---
@@ -81,7 +81,7 @@ agb MUST also provide emit-first prompt features that support a strict Research�
 
 1. Authorize (upon Accept) a **new repository** for the agb CLI and Governance Pack SSOT.
 2. Define pack content by **semantic portability classes**, derived from portable assets whose *provenance* includes work done under Accepted RFC-DOC-001 (smtgit policy baseline), without auto-Accepting example copies inside foreign target repos.
-3. Ship **Core Governance** that includes the decision-document triad: `RFCs/` · `docs/research/` · `docs/maintenance/reports/` (roles defined in living smtgit docs; pack MUST preserve those roles).
+3. Ship **Core Governance** that includes the decision-document triad: `RFCs/` · `docs/research/` · `docs/maintenance/reports/` (roles defined in living smtgit docs; pack MUST preserve those roles, including research **flat + dated** primary reports and optional `supplementary/` / `archive/` layout).
 4. Require **Project Overlay** generation for target-specific conventions; forbid shipping smtgit Spec `10` verbatim into foreign repos.
 5. Make **Examples** (including packaged RFC-DOC-001 text) **opt-in**, isolated from the target’s active RFC sequence.
 6. Specify CLI responsibilities for `init`, `scan`, `plan migrate`, `apply`, `validate`, `update`, `doctor`, `rollback`, and pack/prompt commands.
@@ -167,7 +167,7 @@ Classify by **portability semantics**, not by original numeric filenames.
 
 | Class | Role | Default on `init` | Editable by user |
 |-------|------|-------------------|------------------|
-| **Core Governance** | Agent entry skeleton zones, portable rules, RFC process/TEMPLATE, `docs/research/` convention, `docs/maintenance/reports/` retention rules, shared doc templates needed for the triad | **On** | Managed zones discouraged; overlays for project facts |
+| **Core Governance** | Agent entry skeleton zones, portable rules (incl. Spec `02` product-oriented README writing), RFC process/TEMPLATE, `docs/research/` convention (dated primary + `supplementary/` / `archive/`), `docs/maintenance/reports/` retention rules, shared doc templates needed for the triad | **On** | Managed zones discouraged; overlays for project facts |
 | **Workflow** | Operating playbooks (init→operate→update cadence) | **On** (minimal MVP set) | May extend locally |
 | **Prompt Library** | Versioned prompts including research/rfc/migration | **On** (MVP subset) | Local additions allowed; managed prompts merge on update |
 | **Project Overlay** | Generated target conventions (`*-project-conventions`), local AGENTS user zones | **Generated** | Expected |
@@ -298,8 +298,9 @@ Ambiguous flag `--i-approve-research` is **rejected** by this revision.
 
 ```yaml
 # docs/research/<topic>.review.yaml  (design example)
+# Prefer flat dated research paths per living docs/research/README.md
 schema_version: "1"
-research_report_path: "docs/research/my-topic-research.md"
+research_report_path: "docs/research/YYYY-MM-DD-my-topic.md"
 research_report_sha256: "…"
 reviewed_at: "2026-11-19T15:00:00Z"
 reviewed_by: "alice@example.com"    # or Maintainer handle
@@ -583,10 +584,11 @@ Rollback: reject/defer before extraction; after extraction, stop publishing agb 
 
 ### In-repository (Verified paths)
 
-- [`../agb/docs/research/repository-governance-bootstrap-tool-research.md`](../agb/docs/research/repository-governance-bootstrap-tool-research.md)
-- [`../docs/research/README.md`](../docs/research/README.md) — triad convention
+- [`../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`](../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md)
+- [`../docs/research/README.md`](../docs/research/README.md) — triad + research layout convention (authoritative)
 - [`../agb/docs/research/README.md`](../agb/docs/research/README.md)
 - [`../agb/README.md`](../agb/README.md)
+- [`../.agents/rules/02-readme-writing.md`](../.agents/rules/02-readme-writing.md) — product-oriented README (living)
 - [`../agb/examples/rfc-doc-001-deliverables.md`](../agb/examples/rfc-doc-001-deliverables.md)
 - [`../agb/prompts/research-task.md`](../agb/prompts/research-task.md)
 - [`../agb/prompts/rfc-from-research.md`](../agb/prompts/rfc-from-research.md)

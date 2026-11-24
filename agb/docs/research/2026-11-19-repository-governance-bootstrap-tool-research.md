@@ -3,8 +3,9 @@
 - **Document type:** Product / technical feasibility research (not an Accepted RFC)
 - **Date:** 2026-11-19 (aligned revision)
 - **Document class:** Research report (`docs/research/` triad; see [`README.md`](README.md))
-- **Path:** `agb/docs/research/repository-governance-bootstrap-tool-research.md`
-- **Prior locations:** `docs/repository-governance-bootstrap-tool-research.md` (removed); `agb/docs/repository-governance-bootstrap-tool-research.md` (moved here)
+- **Role:** Current **primary** under `agb/docs/research/` (flat + dated name; inventory in [`README.md`](README.md))
+- **Path:** `agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`
+- **Prior locations:** `docs/repository-governance-bootstrap-tool-research.md` (removed); `agb/docs/repository-governance-bootstrap-tool-research.md` (moved); `agb/docs/research/repository-governance-bootstrap-tool-research.md` (renamed 2026-11-24 to match living dated-name convention)
 - **Reference repository surveyed:** smtgit (origin of the governance system)
 - **Product name (working):** **agb** — agent governance bootstrap
 - **Product home:** **new repository** (not implemented inside smtgit)

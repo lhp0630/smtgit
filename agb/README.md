@@ -18,19 +18,21 @@
 |----------|------------|--------------------------|
 | **Agent Rules** | Agent 可以做什么、不可越权什么、按什么流程协作 | `AGENTS.md`、`.agents/rules/`（可移植规格；项目 Overlay 单独生成） |
 | **RFC** | 架构与重大变更应做什么、为什么 | `RFCs/` 流程、模板与状态机；仅人类维护者可 `Accepted` |
-| **Documentation Governance** | 文档如何组织、如何更新、如何与决策三角一致 | `.agents/rules` 中架构 / 生命周期等规格；`docs/` 与三角约定 |
+| **Documentation Governance** | 文档如何组织、如何更新、如何与决策三角一致 | `.agents/rules`（含 Spec `02` 产品向 README、`05`/`08` 研究布局）；`docs/` 与三角约定 |
 | **Documentation Workflow** | Agent 如何理解、创建、修改、审查与维护文档 | 规则规格 + 文档模板 + 审查清单 |
 | **Agent Workflow** | 开发者如何把 Agent 嵌进日常研发节奏 | 安装后的运营模型（调研 → RFC → 实施报告；Pack 维护） |
 | **Prompt Templates** | 特定任务如何用受约束的标准 Prompt 启动 | 本目录 `prompts/` 草案；将来进入 Pack 的 Prompt Library |
 | **配套资源** | 适配器、校验、锁文件、迁移计划与备份等 | 设计见 RFC-DOC-002；本暂存区仅有研究与映射，无实现 |
 
-决策文档三角（角色不可混用）：
+决策文档三角（角色不可混用；以仓库根 [docs/research/README.md](../docs/research/README.md) 等 living 约定为准）：
 
 | 位置 | 问题 |
 |------|------|
 | `RFCs/` | 应做什么、为什么？（提案与接受记录） |
-| `docs/research/` | 学到了什么、应考虑什么？（调研；**不是**接受） |
+| `docs/research/` | 学到了什么、应考虑什么？（调研；**不是**接受；扁平 + 日期文件名；`supplementary/` / `archive/`） |
 | `docs/maintenance/reports/` | 实际做了什么、结果如何？（实施 / 迁移记录） |
+
+参考源 README 写作规范见 Spec [`02`](../.agents/rules/02-readme-writing.md)（产品向目录；完整命令参考仍在 `docs/<command>.md`）。本 `agb/README.md` 是产品暂存区说明，不替代根 README。
 
 ## 产品设想（设计中）
 
@@ -75,9 +77,9 @@
 agb/                                 # 位于 smtgit 内的产品暂存区（非运行时）
 ├── README.md                        # 本说明
 ├── docs/
-│   └── research/                    # agb 调研报告（三角中的 research 角色）
+│   └── research/                    # agb 调研（对齐仓库级 research 布局约定）
 │       ├── README.md
-│       └── repository-governance-bootstrap-tool-research.md
+│       └── YYYY-MM-DD-<topic>.md    # 当前主调研（扁平 + 日期）
 ├── prompts/
 │   ├── research-task.md             # 草案：想法 → Research Task Prompt
 │   └── rfc-from-research.md         # 草案：已评审调研 → RFC Prompt
@@ -93,7 +95,7 @@ Living 的 smtgit 治理仍在仓库根：`AGENTS.md`、`.agents/`、`RFCs/`、`
 
 ```bash
 # 1. 调研：学到了什么 / 应考虑什么
-less agb/docs/research/repository-governance-bootstrap-tool-research.md
+less agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md
 
 # 2. 提案：应做什么 / 为什么（Status: Draft — 非实现授权）
 less RFCs/RFC-DOC-002-agent-governance-bootstrap.md
@@ -113,14 +115,15 @@ bash smtgit.sh help pull
 
 | 文档 | 用途 |
 |------|------|
-| [docs/research/README.md](docs/research/README.md) | agb 调研目录约定 |
-| [docs/research/repository-governance-bootstrap-tool-research.md](docs/research/repository-governance-bootstrap-tool-research.md) | 产品化可行性与设计调研 |
+| [docs/research/README.md](docs/research/README.md) | agb 调研目录约定（对齐 living research 布局） |
+| [docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md](docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md) | 产品化可行性与设计调研（当前主报告） |
 | [prompts/research-task.md](prompts/research-task.md) | Research Task Prompt 草案 |
 | [prompts/rfc-from-research.md](prompts/rfc-from-research.md) | RFC Authoring Prompt 草案 |
 | [examples/rfc-doc-001-deliverables.md](examples/rfc-doc-001-deliverables.md) | DOC-001 → Pack 映射 |
 | [../RFCs/RFC-DOC-002-agent-governance-bootstrap.md](../RFCs/RFC-DOC-002-agent-governance-bootstrap.md) | agb 产品边界与设计（**Draft**） |
 | [../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md](../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md) | 参考源治理基线（**Accepted**） |
-| [../docs/research/README.md](../docs/research/README.md) | 仓库级调研约定 |
+| [../docs/research/README.md](../docs/research/README.md) | 仓库级调研约定（主规范） |
+| [../.agents/rules/02-readme-writing.md](../.agents/rules/02-readme-writing.md) | 产品向 README 写作规范 |
 | [../AGENTS.md](../AGENTS.md) | smtgit Agent 入口 |
 
 | 项 | 状态 |
