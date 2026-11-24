@@ -33,7 +33,7 @@ smtgit/
 │   └── scan.sh               # Discover Git repos by sdepth
 ├── docs/                     # Per-command / topic docs
 │   ├── <command>.md
-│   ├── research/             # Research reports (what we learned / should consider)
+│   ├── research/             # Research reports (primary / supplementary / archive)
 │   └── maintenance/          # Migration notes and retained implementation reports
 ├── RFCs/                     # Design / process proposals (what we should do and why)
 ├── .agents/
@@ -42,7 +42,7 @@ smtgit/
 ├── .cursor/rules/            # Cursor Rules load entry → .agents/rules
 ├── .github/workflows/
 │   └── release.yml           # push v* tag → package + GitHub Release
-├── README.md                 # Overview only
+├── README.md                 # Product overview (see Spec 02)
 └── AGENTS.md                 # Agent entry point
 ```
 
@@ -50,7 +50,7 @@ Constraints:
 
 1. **Thin entry, thick shared:** `smtgit.sh` only dispatches and orchestrates; reusable logic belongs in `shared/`.
 2. **One command, one doc:** full semantics in `docs/<command>.md`, not README.
-3. **README is overview only:** intro, features, layout, shortest examples; no scan deep-dives.
+3. **README is product overview only:** follow Spec [`02`](02-readme-writing.md) (Why / Features / Requirements / Quick Start / How It Works / Usage / Safety / Documentation / License). Conceptual `sdepth` explanation is allowed; full scan workflow, exit codes, and related-code tables stay in `docs/<command>.md`. Repository layout trees live here and in `AGENTS.md`, not as a required README section.
 4. **Pure bash + system git:** do not add other runtime dependencies; do not perform destructive git operations (currently only `pull`).
 
 ### B. Core design principle — stable domain helpers, not stopgaps
@@ -111,17 +111,13 @@ Additional rules:
 
 1. Add dispatch and `help` in `smtgit.sh`.
 2. Put domain logic in `shared/` (reuse; do not copy).
-3. Add `docs/<command>.md` and a README feature bullet.
+3. Add `docs/<command>.md` and a verifiable mention under README **Features** and/or **Usage** (per Spec [`02`](02-readme-writing.md)).
 
 ### F. Documentation format
 
 #### README.md section order
 
-1. One-sentence introduction
-2. **功能** (subcommand list)
-3. **目录布局** (tree)
-4. **快速开始** (shortest commands)
-5. Links into `docs/`
+Follow Spec [`02-readme-writing.md`](02-readme-writing.md) (single source of truth for README section order). Do not maintain a second conflicting order here.
 
 #### `docs/<command>.md` section order
 
@@ -135,7 +131,7 @@ Align with [`docs/pull.md`](../../docs/pull.md):
 6. **退出码** — table
 7. **相关代码** — entry + `shared/` files
 
-Style: use comparison tables for branches; keep example trees semantically accurate; do not push implementation detail into README.
+Style: use comparison tables for branches; keep example trees semantically accurate; do not push full command-reference detail into README.
 
 ## Prohibited behavior
 

@@ -104,3 +104,10 @@ No legacy instruction was found to be false against current code. Layout omissio
 - Canonical file relocated to [`RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](../../RFCs/accepted/RFC-DOC-001-documentation-governance-bootstrap.md).
 - A stub remains at `RFCs/RFC-DOC-001-documentation-governance-bootstrap.md` pointing to the canonical path.
 - Historical implementation reports that record Status **Proposed** *at time of work* are left unchanged per Spec `08`.
+
+## 10. Addendum — 2026-11-24 product-oriented README section order
+
+- Maintainers directed implementation of [`docs/research/2026-11-24-product-readme-outline-rule-conflicts.md`](../research/2026-11-24-product-readme-outline-rule-conflicts.md) **without** a separate RFC.
+- Living README section order moved from legacy「功能 / 目录布局 / 快速开始」to Spec `02` product outline (Why / Features / Requirements / Quick Start / How It Works / Usage / Safety / Documentation / License).
+- Spec `10` §F now defers README order to Spec `02` (avoids dual source of truth). Historical rows L5/L17 above remain as migration-time disposition records.
+- Implementation record: [`reports/2026-11-24-product-readme-outline-implementation.md`](reports/2026-11-24-product-readme-outline-implementation.md).

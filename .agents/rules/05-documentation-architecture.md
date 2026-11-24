@@ -28,14 +28,24 @@ Use these locations for substantial design and governance work. Do **not** colla
 
 New Research Reports MUST be delivered under `docs/research/` (see that directory’s README).
 
+Research layout (normative detail in [`docs/research/README.md`](../../docs/research/README.md)):
+
+| Path | Role |
+|------|------|
+| `docs/research/YYYY-MM-DD-<topic>.md` | Current research conclusions (primary entry; **flat + dated** name; listed in that directory’s README) |
+| `docs/research/supplementary/` | Standalone topical reports that still add value |
+| `docs/research/archive/` | Superseded reports retained for traceability |
+
+Primary reports MUST use flat dated filenames (not a fixed evergreen name such as `research-report.md`). Keep information-valuable research history; do not retain ephemeral notes or duplicate intermediate drafts in the repository.
+
 ### Diátaxis mapping (adapted, not forced into new top-level dirs)
 
 | Need | Form | smtgit location |
 |------|------|-----------------|
-| Orientation / quick start | Tutorial-lite / how-to | `README.md` Quick Start |
+| Orientation / quick start | Tutorial-lite / how-to | `README.md` Quick Start / Usage |
 | Task-oriented procedure | How-to | `docs/release.md`, workflow sections in `docs/<command>.md` |
 | Exact semantics / options | Reference | `docs/<command>.md` command tables, exit codes |
-| Concepts / rationale | Explanation | `docs/<command>.md` key semantics; RFCs for decisions; research under `docs/research/` when pre-decision |
+| Concepts / rationale | Explanation | `README.md` How It Works (short, conceptual); `docs/<command>.md` key semantics; RFCs for decisions; research under `docs/research/` when pre-decision |
 | Agent operating rules | Agent guide | `AGENTS.md` + `.agents/rules/` |
 
 Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees unless Maintainers request them.
@@ -43,7 +53,7 @@ Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees un
 ### Project documentation rules (from legacy AGENTS.md)
 
 1. **One command, one doc:** full command semantics live in `docs/<command>.md`, not in README.
-2. **README is overview only:** intro, features, layout, shortest examples, links.
+2. **README is product overview only:** follow Spec [`02-readme-writing.md`](02-readme-writing.md) (Why / Features / Requirements / Quick Start / How It Works / Usage / Safety / Documentation / License). Not a repository layout dump and not a full command reference.
 3. **`docs/<command>.md` fixed section order:**
    1. Title = command name; one-line description
    2. **命令** — usage + options table (option / required / default / description)
@@ -52,11 +62,11 @@ Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees un
    5. **示例** — default, boundaries (for example `-p .`, `sdepth=0`), help
    6. **退出码** — table
    7. **相关代码** — entry + `shared/` files
-4. Extending a subcommand MUST add or update `docs/<command>.md` and a README feature bullet.
+4. Extending a subcommand MUST add or update `docs/<command>.md` and a verifiable mention under README **Features** and/or **Usage**.
 
 ## Prohibited behavior
 
-1. MUST NOT dump scan implementation detail into README.
+1. MUST NOT dump full scan implementation detail (complete workflow / exit-code / related-code tables) into README; conceptual How It Works is allowed per Spec 02.
 2. MUST NOT split one command’s normative semantics across conflicting docs without a single source of truth.
 3. MUST NOT relocate accepted RFCs into `docs/` in a way that obscures decision history.
 
@@ -69,7 +79,7 @@ Do **not** create empty Tutorial/How-to/Reference/Explanation directory trees un
 ## Verification criteria
 
 - New command docs follow the section order.
-- README remains overview-only.
+- README remains product-overview-only per Spec 02.
 - Navigation links resolve.
 
 ## References

@@ -14,7 +14,7 @@ bash smtgit.sh pull -p <path> [--sdepth <0|1>]
 | `--sdepth` | 否 | `1` | Git repo / 子模块的**嵌套扫描深度**（不是目录深度）。当前仅接受 `0` 或 `1` |
 | `-h`, `--help` | 否 | — | 打印本命令用法并退出 `0` |
 
-总览与最短示例见根目录 [README.md](../README.md)。
+产品总览、场景与 `sdepth` 概念说明见根目录 [README.md](../README.md)。本文是 `pull` 的权威命令参考（选项、完整工作流、退出码、相关代码）。
 
 ## 关键语义
 

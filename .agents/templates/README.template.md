@@ -4,22 +4,27 @@ Use this when creating or substantially revising `README.md`.
 
 ## Required section order
 
-1. One-sentence project introduction
-2. **功能** — subcommands actually implemented
-3. **目录布局** — tree matching the repo
-4. **快速开始** — shortest verified commands
-5. Links to `docs/`
+1. Title + one-sentence product positioning (+ short problem / audience / differentiation)
+2. **Why smtgit?** — verified scenarios only
+3. **Features** — capabilities (not a repository tree)
+4. **Requirements** — verified dependencies only
+5. **Quick Start** — obtain project + shortest verified commands
+6. **How It Works** — conceptual `sdepth` + Path scheme C summary
+7. **Usage** — common commands; link to `docs/<command>.md`
+8. **Safety and Limitations** — evidence-backed only
+9. **Documentation** — product docs; at most one contributor/agent line
+10. **License** — real `LICENSE` link, or explicit “not provided” disclosure
 
-## Optional sections (after the required ones)
+## Optional (Documentation line only)
 
-- Release / tag notes (only if matching `docs/release.md` + workflow)
-- Link to `AGENTS.md` / `RFCs/` / `.agents/rules/` for contributors and agents
-- Contribution pointer (only if `CONTRIBUTING.md` exists or draft status is explicit)
-- License (only if a LICENSE file exists)
+- Single pointer to `AGENTS.md` / `RFCs/` for contributors and agents
+- Contribution pointer only if `CONTRIBUTING.md` exists or draft status is explicit
 
 ## Validation
 
+- [ ] Section order matches [`.agents/rules/02-readme-writing.md`](../rules/02-readme-writing.md)
 - [ ] Commands match `bash smtgit.sh help` / `help pull`
-- [ ] Features list matches `smtgit.sh` dispatch
-- [ ] No fabricated badges, license, or platform matrix
-- [ ] Detailed semantics deferred to `docs/<command>.md`
+- [ ] Features / Usage match `smtgit.sh` dispatch
+- [ ] No fabricated badges, license text, or platform matrix
+- [ ] Full semantics deferred to `docs/<command>.md` (no full workflow / exit-code / related-code dump)
+- [ ] No required repository directory-tree section

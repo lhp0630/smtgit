@@ -40,7 +40,7 @@ Full normative detail: [`.agents/rules/10-smtgit-project-conventions.md`](.agent
 - **Path scheme C:** worktree-root `-p` always pulls itself and scans nested only when `sdepth=0`; non-root `-p` discovers per `sdepth`.
 - **`discover_git_repos`** never emits `root` itself.
 - Prefer stable domain-named helpers (`is_git_worktree`, `discover_git_repos`, `git_pull`) over migration stopgaps (`_raw_*`, `_mapped_*`, `_compat_*`).
-- One command → one `docs/<command>.md`; README stays overview-only with fixed section order.
+- One command → one `docs/<command>.md`; README stays product-overview-only with fixed section order per [`.agents/rules/02-readme-writing.md`](.agents/rules/02-readme-writing.md).
 - Single-repo pull failure does not abort the batch; CLI aggregates exit status.
 - Every subcommand must provide `help`.
 
@@ -67,7 +67,7 @@ Rules: [`.agents/rules/01-repository-understanding.md`](.agents/rules/01-reposit
 |-------------|----------|
 | Human overview | [`README.md`](README.md) |
 | Command reference / how-to | [`docs/`](docs/) |
-| Research reports | [`docs/research/`](docs/research/README.md) — *what have we learned / should we consider?* |
+| Research reports | [`docs/research/`](docs/research/README.md) — *what have we learned / should we consider?* (primary: dated `YYYY-MM-DD-*.md` listed in that README; also `supplementary/`, `archive/`) |
 | RFC process | [`RFCs/README.md`](RFCs/README.md), [`RFCs/process.md`](RFCs/process.md) — *what should we do and why?* |
 | Implementation / migration reports | [`docs/maintenance/reports/`](docs/maintenance/reports/) — *what did we actually do?* |
 | Detailed agent rules | [`.agents/rules/README.md`](.agents/rules/README.md) |
