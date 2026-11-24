@@ -1,0 +1,9 @@
+# Example research review evidence — RFC-DOC-002 §7.5.3
+# Required by `agb rfc` (stub). Boolean CLI flags without identity+checksum are rejected.
+schema_version: "1"
+research_report_path: "docs/research/YYYY-MM-DD-topic.md"
+research_report_sha256: "TBD"
+reviewed_at: "2026-11-24T00:00:00Z"
+reviewed_by: "maintainer@example.com"
+decision: "approve_for_rfc" # or reject | revise
+notes_path: null

@@ -1,0 +1,69 @@
+# Governance Pack manifest — architecture skeleton (RFC-DOC-002 §7.4).
+# Content under module paths is placeholder only; Phase 0 genericization TBD.
+manifest_schema_version: "1"
+pack_id: "org.agb.governance-core"
+pack_version: "0.0.0-skeleton"
+min_cli_version: "0.0.0-skeleton"
+max_cli_version: null
+created_at: "2026-11-24T00:00:00Z"
+license: "TBD"
+
+modules:
+  core_governance: { required: true }
+  workflow: { required: true }
+  prompt_library: { required: true }
+  project_overlay: { required: true }
+  agent_adapter_cursor: { required: false, default: true }
+  agent_adapter_claude: { required: false, default: false }
+  agent_adapter_gemini: { required: false, default: false }
+  agent_adapter_copilot: { required: false, default: false }
+  examples: { required: false, default: false }
+
+dependencies:
+  workflow: [core_governance]
+  prompt_library: [core_governance]
+  project_overlay: [core_governance]
+  agent_adapter_cursor: [core_governance]
+  agent_adapter_claude: [core_governance]
+  agent_adapter_gemini: [core_governance]
+  agent_adapter_copilot: [core_governance]
+  examples: [core_governance]
+
+integrity:
+  checksums_file: "checksums.sha256"
+
+provenance:
+  reference_origin: "smtgit"
+  reference_commit: "TBD-at-extract"
+  note: >
+    Portable files will be derived from governance assets in the reference
+    origin after Phase 0 genericization. RFC-DOC-001 is Accepted in that
+    origin (2026-11-19). This skeleton does not ship Spec 10 or product CLI docs.
+
+deprecations: []
+
+resources:
+  - id: "core.placeholder"
+    class: core_governance
+    path: "core/README.md"
+    provenance_path: null
+  - id: "workflow.placeholder"
+    class: workflow
+    path: "workflow/README.md"
+    provenance_path: null
+  - id: "prompts.placeholder"
+    class: prompt_library
+    path: "prompts/README.md"
+    provenance_path: "agb/prompts/"
+  - id: "overlay.placeholder"
+    class: project_overlay
+    path: "overlay/README.md"
+    provenance_path: null
+  - id: "adapter.cursor.placeholder"
+    class: agent_adapter_cursor
+    path: "adapters/cursor/README.md"
+    provenance_path: ".cursor/rules/agents-rules.mdc"
+  - id: "examples.placeholder"
+    class: examples
+    path: "examples/README.md"
+    provenance_path: null

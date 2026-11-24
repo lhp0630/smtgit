@@ -1,0 +1,17 @@
+# Example target lockfile (.agb/lock.yaml) — RFC-DOC-002 §7.4
+# Not written by the skeleton CLI yet.
+manifest_schema_version: "1"
+pack_id: "org.agb.governance-core"
+pack_version: "0.0.0-skeleton"
+source: "TBD"
+ref: "pack/v0.0.0-skeleton"
+resolved_commit: "TBD"
+checksum_sha256: "TBD"
+cli_version_used: "0.0.0-skeleton"
+modules:
+  - core_governance
+  - workflow
+  - prompt_library
+  - project_overlay
+examples_installed: false
+installed_at: "TBD"

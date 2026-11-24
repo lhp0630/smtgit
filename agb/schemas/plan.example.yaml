@@ -1,0 +1,13 @@
+# Example immutable migration plan — RFC-DOC-002 §7.7
+# Written by `plan migrate` (stub). Never mutates governance trees by itself.
+schema_version: "1"
+plan_id: "example-plan"
+state: "PLANNED" # PLANNED → APPROVED → … → COMPLETED | FAILED | ROLLED_BACK | STALE_PLAN
+pack_id: "org.agb.governance-core"
+pack_version: "0.0.0-skeleton"
+inventory_hash: "TBD"
+plan_sha256: "TBD"
+dispositions: []
+# - { path: "AGENTS.md", action: "merge", module: "core_governance" }
+ops: []
+# - { id: "op-001", action: "write", path: "…", checksum: "…" }

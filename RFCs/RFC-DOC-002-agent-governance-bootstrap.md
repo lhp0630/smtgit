@@ -6,10 +6,10 @@
 - **Type:** Process / Documentation Architecture / Product Boundary
 - **Authors:** Project Maintainers (drafted by AI agent from research; revised after architecture/governance review)
 - **Created:** 2026-11-19
-- **Updated:** 2026-11-19
+- **Updated:** 2026-11-24
 - **Supersedes:** N/A
 - **Superseded by:** N/A
-- **Related research:** [`../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`](../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md)
+- **Related research:** [`../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`](../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md); CLI help i18n: [`../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md`](../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md)
 - **Related RFC:** [`accepted/RFC-DOC-001-documentation-governance-bootstrap.md`](accepted/RFC-DOC-001-documentation-governance-bootstrap.md) (Status: **Accepted** in smtgit — governance policy baseline for portable Core; target Examples remain non-sequence copies)
 
 ---
@@ -30,6 +30,7 @@
 | Trust boundaries | §11 |
 | Command responsibilities | §7.6 |
 | Three-way merge (future) | §7.13 |
+| CLI help bilingual (zh/en), locale-selected — research L1 | §7.14 |
 | Blocking vs deferred decisions | §15 |
 
 ---
@@ -453,6 +454,29 @@ For managed files on `update`:
 
 Exact algorithm may follow Copier’s approach; this RFC freezes the *contract*, not the implementation code.
 
+### 7.14 CLI help language (zh / en) — research scheme L1
+
+**Research:** [`../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md`](../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md) (scheme **L1**).
+
+**Decision (Draft RFC design; staging implementation follows this section):**
+
+1. **Scope (MVP):** bilingual **help / usage** strings for the agb CLI only. Command names and flags remain English. Pack Markdown, RFCs, and Agent prompts are **out of scope**. Stub/log diagnostics MAY stay English until a later pass.
+2. **Mechanism = L1:** dual in-process string tables (e.g. `usage_*_en` / `usage_*_zh` or equivalent) plus a small handwritten locale resolver. **MUST NOT** require gettext / `.mo` for MVP.
+3. **Both languages MUST remain in the tree** so English is never deleted when Chinese is added (“保留英文版”).
+4. **UI language resolution** (high → low):
+   1. Explicit override: `--lang en|zh` (leading global option) or `AGB_LANG=en|zh` (environment). Invalid values SHOULD warn and fall through.
+   2. Messages locale: `LC_ALL` if set, else `LC_MESSAGES` if set, else `LANG`.
+   3. If that value’s language tag is `C` or `POSIX` (including `C.UTF-8` → tag `C`) → **English** (C short-circuit; ignore `LANGUAGE`).
+   4. Else if `LANGUAGE` is set (GNU list, `:`-separated) → first list entry that maps to `zh` or `en`.
+   5. Else map the messages locale tag: `zh` / `zh_*` → Chinese; `en` / `en_*` → English.
+   6. Else → English.
+5. **Explicit override MUST beat C short-circuit** (e.g. `AGB_LANG=zh LC_ALL=C` → Chinese) so translators can preview Chinese under `C`.
+6. **MVP mapping:** do **not** split Simplified vs Traditional; one Chinese help corpus.
+7. **Unrecognized locales** (e.g. `ja_JP`) → English, no hard failure.
+8. **smtgit** `smtgit.sh help` is **not** required to adopt this policy in this RFC.
+
+**Non-goals:** gettext (research L2), external locale files as the MVP mechanism (L3), or override-only without reading system locale (L4 alone).
+
 ---
 
 ## 8. Alternatives considered
@@ -466,6 +490,9 @@ Exact algorithm may follow Copier’s approach; this RFC freezes the *contract*,
 | E. Keep `--i-approve-research` boolean | Simple gate | Does not bind human identity + report checksum (P0-2) |
 | F. Install Examples by default into `RFCs/` sequence | “Complete” demo | Contaminates active RFC numbering; false authority risk (P0-3) |
 | G. Treat DOC-001 as Accepted because packaged | Convenience | Violates process authenticity (P0-1) |
+| H. gettext (`.po`/`.mo`) for help MVP | Standard i18n | Extra toolchain; overweight for zh+en help only — deferred (research L2) |
+| I. External `locales/{en,zh}/*.txt` as MVP | Separation | Extra load path; L1 preferred for staging skeleton (research L3) |
+| J. `--lang` / `AGB_LANG` only, ignore locale | Predictable | Fails “follow system language” goal — override layer only (research L4) |
 
 ---
 
@@ -577,6 +604,8 @@ Rollback: reject/defer before extraction; after extraction, stop publishing agb 
 - [ ] After extraction: pointer vs delete vs mirror for `smtgit/agb/`?
 - [ ] Conflict UX default for three-way merge (`inline` vs `rej`)?
 - [ ] Signing technology for pack tags?
+- [x] CLI **help** UI language: zh/en via research **L1** + locale algorithm — **§7.14** (2026-11-24)
+- [ ] Whether stub/`log_*` strings follow the same UI language resolver (post-MVP OK)
 
 ---
 
@@ -585,6 +614,7 @@ Rollback: reject/defer before extraction; after extraction, stop publishing agb 
 ### In-repository (Verified paths)
 
 - [`../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md`](../agb/docs/research/2026-11-19-repository-governance-bootstrap-tool-research.md)
+- [`../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md`](../agb/docs/research/supplementary/2026-11-24-cli-help-bilingual-locale.md) — CLI help zh/en; scheme L1 → §7.14
 - [`../docs/research/README.md`](../docs/research/README.md) — triad + research layout convention (authoritative)
 - [`../agb/docs/research/README.md`](../agb/docs/research/README.md)
 - [`../agb/README.md`](../agb/README.md)
@@ -632,7 +662,8 @@ This revision **preserves**:
 6. MVP uses emit-first prompt generation.  
 7. Automatic Agent CLI execution is optional.  
 8. Full migration automation and three-way upgrades are phased.  
-9. This RFC alone does not change smtgit pull semantics.
+9. This RFC alone does not change smtgit pull semantics.  
+10. CLI help uses research scheme **L1** (dual zh/en string tables + locale resolver); English corpus retained; §7.14.
 
 **Apparent tension resolved:** research/examples texts that said “init installs RFC-DOC-001 example by default” conflict with P0-3. This RFC **keeps** the independent-product decisions and **changes** only the Examples default to **opt-in**, explaining the conflict rather than silently keeping both.
 

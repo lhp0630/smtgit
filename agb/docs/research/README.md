@@ -42,6 +42,7 @@ agb/docs/research/
 | Role | Document | Topic |
 |------|----------|-------|
 | Primary | [`2026-11-19-repository-governance-bootstrap-tool-research.md`](./2026-11-19-repository-governance-bootstrap-tool-research.md) | Feasibility and design research for agb |
+| Supplementary | [`supplementary/2026-11-24-cli-help-bilingual-locale.md`](./supplementary/2026-11-24-cli-help-bilingual-locale.md) | CLI help 中英双版；按系统 locale 选择语言 |
 
 ## Conventions
 

@@ -1,0 +1,15 @@
+# Kit lock — pin skeleton pack for local staging demos.
+manifest_schema_version: "1"
+pack_id: "org.agb.governance-core"
+pack_version: "0.0.0-skeleton"
+source: "local:agb/pack"
+ref: "skeleton"
+resolved_commit: "TBD"
+checksum_sha256: "TBD"
+cli_version_used: "0.0.0-skeleton"
+modules:
+  - core_governance
+  - workflow
+  - prompt_library
+  - project_overlay
+examples_installed: false

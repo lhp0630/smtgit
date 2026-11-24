@@ -1,0 +1,9 @@
+# Example Prompt-only kit state.yaml — RFC-DOC-002 §7.8
+schema_version: "1"
+kit_id: "example-kit"
+pack_version: "0.0.0-skeleton"
+current_stage: "00-fetch-verify"
+# Stages: 00-fetch-verify → inventory → plan → human-approve → apply → validate → report
+completed_stages: []
+paused: false
+last_error: null

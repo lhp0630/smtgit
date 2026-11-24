@@ -1,0 +1,7 @@
+schema_version: "1"
+kit_id: "prompt-only-skeleton"
+pack_version: "0.0.0-skeleton"
+current_stage: "00-fetch-verify"
+completed_stages: []
+paused: false
+last_error: null
